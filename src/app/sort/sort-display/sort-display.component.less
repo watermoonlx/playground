@@ -1,0 +1,31 @@
+.main-container{
+    position: relative;
+
+    .circle-container{
+        display: inline-block;
+        position: absolute;
+
+        .circle{
+            height: 50px;
+            width:  50px;
+            border-radius: 50%;
+            background-color: rgb(31, 178, 220);
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 20px;
+            border: 2px solid #A9A4A4;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 0;
+        }
+
+        .selected{
+            background-color: rgb(240, 238, 115);
+            z-index: 9999;
+        }
+    }
+}
+
+

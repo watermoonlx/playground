@@ -1,0 +1,22 @@
+<!--引入根组件-->
+<nz-root>
+    <nz-layout class="full-height">
+
+        <nz-sider nzCollapsible
+                  [(nzCollapsed)]="isCollapsed">
+            <app-sidebar [isCollapsed]="isCollapsed"></app-sidebar>
+        </nz-sider>
+
+        <nz-layout>
+            <app-header>
+
+            </app-header>
+
+            <app-content class="full-height" style="margin:0px 16px;background: #fff;">
+                <router-outlet></router-outlet>
+            </app-content>
+
+            <app-footer></app-footer>
+        </nz-layout>
+    </nz-layout>
+</nz-root>

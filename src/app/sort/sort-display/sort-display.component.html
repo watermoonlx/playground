@@ -1,0 +1,25 @@
+<button nz-button
+        [nzType]="'default'"
+        (click)="startSort()">
+    <span>开始排序</span>
+</button>
+
+<button nz-button
+        [nzType]="'default'"
+        (click)="refresh()">
+    <span>重新生成</span>
+</button>
+
+<div class="main-container">
+    <div class="circle-container"
+         *ngFor="let number of numbers"
+         [@numberIndex]="number.index"
+         (@numberIndex.done)="numberAnimDone()">
+        <div class="circle"
+             [ngClass]="number.selected?'selected':null"
+             [@direction]='number.direction'
+             (@direction.done)="directionAnimDone(number)">
+            {{number.value}}
+        </div>
+    </div>
+</div>
